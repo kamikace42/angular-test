@@ -1,3 +1,9 @@
-<li ng-repeat="key in $ctrl.lista">
-    <p>{{key.nombre+" - "+key.text}}</p>
+<input ng-model="$ctrl.busc" type="text" name="" value="" placeholder="">
+<select ng-model="$ctrl.orden">
+    <option value="nombre">1</option>
+    <option value="text">2</option>
+</select>
+<li ng-repeat="key in $ctrl.lista | filter:$ctrl.busc | orderBy:$ctrl.orden">
+    <p>{{key.text}}</p>
+    <p>{{key.nombre}}</p>
 </li>
