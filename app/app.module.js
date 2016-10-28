@@ -3,7 +3,10 @@
  *
  * Description
  */
-angular.module('testApp', []);
+angular.module('testApp', [
+    'mostrarLista'
+
+]);
 
 
 
